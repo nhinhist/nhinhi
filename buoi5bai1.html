@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Design 3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            display: flex;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 80px;
+            height: 100vh;
+            background-color: #1f1f1f;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+        }
+
+        .sidebar .sidebar {
+            width: 40px;
+            height: 40px;
+            background-color: #624f82;
+            margin: 40px 0;
+            border-radius: 50%;
+        }
+
+        .sidebar .icon:hover {
+            background-color: #937dc2;
+            cursor: pointer;
+        }
+
+        /* Main content */
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            
+        }
+
+        /* Header section */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            max-width: 600px;
+        }
+
+        .get-started {
+            padding: 10px 20px;
+            background-color: #937dc2;
+            border: none;
+            border-radius: 25px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .get-started:hover {
+            background-color: #b992e2;
+        }
+
+        /* News section */
+        .news-section {
+            margin-top: 50px;
+        }
+
+        .news-section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .news-item {
+            background-color: #3a3a3a;
+            border-radius: 10px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 18px;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .news-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 32px;
+            }
+        }
+        img{
+            width: 500px;  
+            height: 250px; 
+
+        }
+        .content {
+            background-color: #937dc2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <i class="fas fa-home" style="font-size:50px; color: white;"></i> 
+        <i class="fas fa-envelope" style="font-size:50px; color: white;"></i> 
+        <i class="fas fa-phone" style="font-size:50px; color: white;"></i> 
+        <div class="icon"></div>
+        <div class="icon"></div>
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+            <div>
+                <h1>Material Design</h1>
+                <p>Material 3 is the latest version of Google's open-source design system. Design and build beautiful, usable products with Material 3.</p>
+            </div>
+            <button class="get-started">Get started</button>
+        </div>
+
+        <div class="news-section">
+            <h2>News & launches</h2>
+            <div class="news-grid">
+                <div class="content">
+                    <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/65/78ce0081ad11e681d7bb31b0a632ef/starry-night.jpg">
+                    <h3>Material Design at Google I/0</h3>
+                    <p>See the full list of Material talks and tutorials launching at I/0 2024</p>
+                </div>
+                <div class="content">
+                    <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/65/78ce0081ad11e681d7bb31b0a632ef/starry-night.jpg">
+                    <h3>How to get Google Fonts</h3>
+                    <p>New API updates and website </p>
+                </div>
+                <div class="content">
+                    <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/65/78ce0081ad11e681d7bb31b0a632ef/starry-night.jpg">
+                    <h3>Figma design kit</h3>
+                    <p>Start designing and prototyping with the complete M3 library of ready-made components</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
