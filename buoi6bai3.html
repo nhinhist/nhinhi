@@ -1,0 +1,268 @@
+<html lang="vi"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalium Theme Clone</title>
+    <link rel="stylesheet" href="6.3.css">
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f5f5f5;
+    }
+    a {
+        color:#353333;
+    
+    }
+    header {
+        text-align: center;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+    }
+    
+    .logo img {
+        width: 50px;
+        height: 50px;
+        text-align: left;
+    }
+    
+    h1 {
+        font-size: 2.5em;
+        font-weight: bold;
+        margin: 20px 0;
+        color: #333;
+    }
+    
+    .highlight {
+        background-color: black;
+        color: white;
+        padding: 5px 10px;
+    }
+    
+    .menu-icon {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        cursor: pointer;
+    }
+    
+    .menu-icon .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        margin: 4px 0;
+    }
+    
+    .category-menu {
+        text-align: center;
+        margin-top: 20px;
+        padding: 10px 0;
+    }
+    
+    .category-menu ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .category-menu ul li {
+        margin: 0 15px;
+        font-size: 1.2em;
+        cursor: pointer;
+    }
+    
+    .category-menu ul li.active {
+        text-decoration: underline;
+    }
+    
+    .portfolio {
+        display: flex;
+        justify-content: center;
+        margin: 40px 0;
+    }
+    
+    .portfolio .item {
+        margin: 0 10px;
+    }
+    
+    .portfolio .item img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+    
+    .promo {
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+        background-color: #232425;
+        padding: 10px 20px;
+        border-radius: 50px;
+    }
+    
+    .promo a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .overlay-content {
+        position: relative;
+        text-align: center;
+    }
+    
+    .overlay-content img {
+        max-width: 90%;
+        max-height: 80vh;
+        border-radius: 10px;
+    }
+    
+    .close-btn {
+        position: absolute;
+        bottom: 250px;
+        left: 600px;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .portfolio .item {
+        position: relative;
+        margin: 0 10px;
+    }
+    
+    .portfolio .item img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+    
+    .overlay-container {
+        position: relative;
+    }
+    
+    .image-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        border-radius: 8px;
+    }
+    
+    .heart {
+        font-size: 2.5rem;
+        color: rgb(242, 238, 238);
+        opacity: 0.8;
+    }
+    
+    .overlay-container:hover .image-overlay {
+        opacity: 1;
+        box-sizing:content-box;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+    
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://demo.kaliumtheme.com/agency/wp-content/uploads/2021/06/Kalium-Theme-Icon.png" alt="Logo">
+        </div>
+        <h1>Clear thinking at the wrong moment can <span class="highlight">stifle creativity</span></h1>
+        <div class="menu-icon" onclick="toggleOverlay()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+
+    <nav class="category-menu">
+        <ul>
+            <li><a href="#">All</a></li>
+            <li><a href="#">Branding</a></li>
+            <li><a href="#">Digital Art</a></li>
+            <li><a href="#">Photography</a></li>
+            <li><a href="#">Print</a></li>
+        </ul>
+    </nav>
+        <section class="portfolio">
+            <div class="item">
+                <div class="overlay-container">
+                    <img src="https://demo.kaliumtheme.com/agency/wp-content/uploads/2021/05/adestra-c-300x200.jpg" alt="Portfolio item 1">
+                    <div class="image-overlay">
+                        <span class="heart">♥</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="overlay-container">
+                    <img src="https://demo.kaliumtheme.com/agency/wp-content/uploads/2021/04/desk-concept-c-468x468.jpg" alt="Portfolio item 2">
+                    <div class="image-overlay">
+                        <span class="heart">♥</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="overlay-container">
+                    <img src="https://demo.kaliumtheme.com/agency/wp-content/uploads/2021/04/multi-color-c-300x199.jpg" alt="Portfolio item 3">
+                    <div class="image-overlay">
+                        <span class="heart">♥</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <div class="promo">
+        <a href="#">Get Kalium for $49</a>
+    </div>
+
+    
+    <div id="overlay" class="overlay" style="display: none;">
+        <div class="overlay-content">
+            <span class="close-btn" onclick="toggleOverlay()">x</span>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+            
+            <script>    function toggleOverlay() {
+                const overlay = document.getElementById("overlay");
+                overlay.style.display = overlay.style.display === "flex" ? "none" : "flex";
+            }    
+            </script>    
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+
+</body></html>

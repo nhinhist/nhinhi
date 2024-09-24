@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album Hot</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Đặt font chữ và padding cho toàn trang */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a2e; /* Nền tím đen */
+    margin: 0;
+    padding: 20px;
+}
+
+/* Bố cục container của album */
+.album-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Tiêu đề của phần album */
+h2 {
+    color: #fff;
+    background-color: #2b2337;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.album-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.album {
+    background-color: #2b2337;
+    color: #fff;
+    padding: 10px;
+    width: 18%;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.5s ease; 
+}
+
+.album img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6); 
+}
+
+.album h3 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+}
+
+.album p {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.album:hover {
+    transform: scale(1.05); 
+}
+
+    </style>
+</head>
+<body>
+    <div class="album-container">
+        <h2>Album Hot</h2>
+        <div class="album-grid">
+            <div class="album">
+                <img src="https://vinatex.com.vn/wp-content/uploads/2020/07/blackpink-mv-how-you-like-that-trang-phuc-dam-dai-den-1024x933.jpg">
+                <h3>How you like that (Single)</h3>
+                <p>Blackpink</p>
+            </div>
+            <div class="album">
+                <img src="https://i1.sndcdn.com/artworks-78uF8fDZ4I8wKH5r-3JMMsA-t500x500.jpg" >
+                <h3>Pink Venom (Single)</h3>
+                <p>Blackpink</p>
+            </div>
+            <div class="album">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/62/Blackpink_-_Shut_Down.jpg/220px-Blackpink_-_Shut_Down.jpg">
+                <h3>Shut Down (Single)</h3>
+                <p>Blackpink</p>
+            </div>
+            <div class="album">
+                <img src="https://i1.sndcdn.com/artworks-3KgJsxLxut1ncHkW-BpBNlw-t500x500.jpg" >
+                <h3>Money (Single)</h3>
+                <p>Lisa</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
