@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Cá Nhân</title>
+    <style>
+        :root {
+            --background-color: #a6d1f7;
+            --text-color: #333;
+            --header-background-color: #2689f4;
+            --nav-background-color: #02a5f6;
+            --nav-link-color: white;
+            --nav-link-active-color: black;
+            --content-background-color: #00bfff;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--header-background-color);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            background-color: var(--nav-background-color);
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--nav-link-color);
+            padding: 10px 15px;
+            background-color: rgba(0, 0, 255, 0.466);
+            border-radius: 5px;
+            display: block;
+        }
+
+        nav a.active {
+            border: 2px solid var(--nav-link-active-color);
+        }
+
+        .content {
+            display: none;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            background-color: var(--content-background-color);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        button {
+            margin: 20px auto;
+            padding: 10px 20px;
+            display: block;
+            background-color: #666;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: var(--header-background-color);
+            color: white;
+        }
+        .profile-img {
+            width: 200px; 
+            height: auto;
+            border-radius: 50%; 
+            margin: 20px auto; 
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .profile-img {
+        width: 150px; 
+    }
+}
+@media (max-width: 480px) {
+    .profile-img {
+        width: 100px; 
+    }
+}
+.hobbies-table {
+    width: 100%;
+    border-collapse: collapse; 
+    margin: 20px 0;
+}
+.hobbies-table th, .hobbies-table td {
+    border: 1px solid #ddd;
+    padding: 12px; 
+    text-align: left; 
+    color: #333; 
+    background-color: #f9f9f9; /}
+.hobbies-table th {
+    background-color: #0e4ff4; 
+    color: white;
+}
+.hobbies-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+.hobbies-table tr:hover {
+    background-color: #ddd;
+}
+@media (max-width: 768px) {
+    .hobbies-table th, .hobbies-table td {
+        padding: 10px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Trang Cá Nhân</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" class="nav-link active" data-target="about">About Me</a></li>
+            <li><a href="#" class="nav-link" data-target="hobbies">My Hobbies</a></li>
+            <li><a href="#" class="nav-link" data-target="skills">Skill</a></li>
+            <li><a href="#" class="nav-link" data-target="project">project</a></li>
+            <li><a href="#" class="nav-link" data-target="contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div id="about" class="content active">
+        <img src="https://scontent.fhan14-3.fna.fbcdn.net/v/t39.30808-6/460823012_122112659708488598_7172292561217402681_n.jpg?stp=dst-jpg_tt7&_nc_cat=103&cb=99be929b-defccdb7&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEIp4HGeY1fJZjhy4dZPz0ByvQ3mNQYm7TK9DeY1BibtEO_aay5fRSAQUf-M2JqT0Xl6LNnP-t3oWabvhXYmRH3&_nc_ohc=2VoU7DSbsowQ7kNvgGltNXN&_nc_ht=scontent.fhan14-3.fna&_nc_gid=A8zx2bt5XBT2mrRY4vvepg9&oh=00_AYBSc1_1XbL9vl6F1dYZiZbpwim0LNjw6U4eH3Qg9oKPPw&oe=6703D60C"
+            alt="ảnh đại diện của tôi" class="profile-img">
+        <h1>Vũ Thùy Linh</h1>
+        <p>Sinh viên ngành CNTT tại trường Đại học Thủ đô Hà Nội</p>
+        <h2>Về tôi</h2>
+        <p> Tên: Vũ Thùy Linh</p>
+        <p> Tuổi: 19</p>
+        <p> Quê quán: tân Dân, Khoái Châu, Hưng Yên</p>
+        <p> SĐT: 098****736</p>
+    </div>
+
+    <div id="hobbies" class="content">
+        <h2>Sở Thích Của Tôi</h2>
+            <table class="hobbies-table">
+                <thead>
+                    <tr>
+                        <th>Sở Thích</th>
+                        <th>Mô Tả</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Chơi game</td>
+                        <td>Thích chơi các trò chơi điện tử vào thời gian rảnh</td>
+                    </tr>
+                    <tr>
+                        <td>Vẽ tranh</td>
+                        <td>Thích ngồi giờ để vẽ một mái tóc</td>
+                    </tr>
+                    <tr>
+                        <td>Nhảy</td>
+                        <td>Thích tham gia các hoạt động nhảy hiện đại và luyện tập mỗi tuần</td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+
+    <div id="skills" class="content">
+        <h2>Kỹ năng</h2>
+            <table class="hobbies-table">
+                <tbody>
+                    <tr>
+                        <td>Nhanh nhẹn linh hoạt</td>
+                    </tr>
+                    <tr>
+                        <td>Thích nghi tốt với công việc</td>
+                    </tr>
+                    <tr>
+                        <td>Có thể sử dụng linh hoạt kĩ năng mềm và cứng</td>
+                    </tr>
+                    <tr>
+                        <td>Có hiểu biết về ngôn ngữ lập trình HTML</td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+
+    <div id="project" class="content">
+        <h2>Dự án</h2>
+        <ul>
+            <li><a href="https://docs.google.com/document/d/16faDLLTqwFt5Gdo7JSYVGj7Op4ZJM1Jc5FjsMsBr-oI/edit">Bài tập buổi 1</a></li>
+            <li><a href="https://docs.google.com/document/d/16faDLLTqwFt5Gdo7JSYVGj7Op4ZJM1Jc5FjsMsBr-oI/edit">Bài tập buổi 2</a></li>
+            <li><a href="https://docs.google.com/document/d/16faDLLTqwFt5Gdo7JSYVGj7Op4ZJM1Jc5FjsMsBr-oI/edit">Bài tập buổi 3</a></li>
+            <li><a href="https://docs.google.com/document/d/16faDLLTqwFt5Gdo7JSYVGj7Op4ZJM1Jc5FjsMsBr-oI/edit">Bài tập buổi 4</a></li>
+            <li><a href="https://docs.google.com/document/d/16faDLLTqwFt5Gdo7JSYVGj7Op4ZJM1Jc5FjsMsBr-oI/edit">Bài tập buổi 5</a></li>
+            <li><a href="https://docs.google.com/document/d/16faDLLTqwFt5Gdo7JSYVGj7Op4ZJM1Jc5FjsMsBr-oI/edit">Bài tập buổi 6</a></li>
+            <li><a href="https://docs.google.com/document/d/16faDLLTqwFt5Gdo7JSYVGj7Op4ZJM1Jc5FjsMsBr-oI/edit">Bài tập buổi 7</a></li>
+        </ul>
+    </div>
+
+    <div id="contact" class="content">
+        <h2>Contact</h2>
+        <p>Kết nối qua: <a href="https://www.facebook.com/profile.php?id=100064464093075">Facebook</a></p>
+        <p>Email: s253votuyen@gmail.com</p>
+        <p>Số điện thoại: 003936</p>
+            
+    </div>
+
+    <button id="theme-toggle">Switch Theme</button>
+
+    <footer>
+        <p>&copy; 2024 VuThuyLinh. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+        const contentSections = document.querySelectorAll('.content');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                navLinks.forEach(link => link.classList.remove('active'));
+
+                contentSections.forEach(section => section.classList.remove('active'));
+                this.classList.add('active');
+                const targetId = this.getAttribute('data-target');
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+        const themeButton = document.getElementById('theme-toggle');
+        let darkTheme = false;
+
+        themeButton.addEventListener('click', function () {
+            if (darkTheme) {
+                document.documentElement.style.setProperty('--background-color', '#f4c7f0');
+                document.documentElement.style.setProperty('--text-color', '#333');
+                document.documentElement.style.setProperty('--header-background-color', '#d97ad2');
+                document.documentElement.style.setProperty('--nav-background-color', '#d97ad2');
+                document.documentElement.style.setProperty('--nav-link-color', 'white');
+                document.documentElement.style.setProperty('--nav-link-active-color', 'black');
+                document.documentElement.style.setProperty('--content-background-color', '#eab1e9');
+            } else {
+                document.documentElement.style.setProperty('--background-color', '#333');
+                document.documentElement.style.setProperty('--text-color', '#f4c7f0');
+                document.documentElement.style.setProperty('--header-background-color', '#444');
+                document.documentElement.style.setProperty('--nav-background-color', '#444');
+                document.documentElement.style.setProperty('--nav-link-color', '#f4c7f0');
+                document.documentElement.style.setProperty('--nav-link-active-color', '#eab1e9');
+                document.documentElement.style.setProperty('--content-background-color', '#555');
+            }
+            darkTheme = !darkTheme;
+        });
+    </script>
+
+</body>
+
+</html>
